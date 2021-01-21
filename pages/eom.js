@@ -24,7 +24,7 @@ export const EOM = ({ employee }) => {
 
 export const getServerSideProps = async (pageContext) => {
 	const url =
-		'https://my-json-server.typicode.com/portexe/next-news/employeeOfTheMonth';
+		'https://my-json-server.typicode.com/chanmyaemaung/news-app/employeeOfTheMonth';
 
 	const apiResponse = await fetch(url);
 	const employee = await apiResponse.json();
