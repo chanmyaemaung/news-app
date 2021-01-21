@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Toolbar } from '../components/toolbar';
 import styles from '../styles/EOM.module.css';
 
@@ -7,6 +8,28 @@ export const EOM = ({ employee }) => {
 
 	return (
 		<div className='page-container'>
+			<Head>
+				<title>Employee Of The Month</title>
+				<meta
+					name='description'
+					content={`This month's employee of the month is ${name}`}
+				/>
+
+				<meta property='og:image' content={image} />
+				<meta property='og:title' content='Employee Of The Month' />
+				<meta
+					property='og:description'
+					content={`This month's employee of the month is ${name}`}
+				/>
+
+				<meta property='twitter:image' content={image} />
+				<meta property='twitter:title' content='Employee Of The Month' />
+				<meta
+					property='twitter:description'
+					content={`This month's employee of the month is ${name}`}
+				/>
+			</Head>
+
 			<Toolbar />
 
 			<div className={styles.main}>
